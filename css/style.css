@@ -1,0 +1,443 @@
+@charset "UTF-8";
+header .deco .ac_ic {
+  background: url(../img/icon/user.png) no-repeat center;
+  background-size: 100%;
+}
+
+header .deco .pw_ic {
+  background: url(../img/icon/pw.png) no-repeat center;
+  background-size: 100%;
+}
+
+header .deco .fgPW_ic {
+  background: url(../img/icon/help.png) no-repeat center;
+  background-size: 100%;
+}
+
+.bg {
+  background: url(../img/BG.png) no-repeat top center;
+  background-size: cover;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: "微軟正黑體";
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: "微軟正黑體";
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 0px;
+  font-family: "微軟正黑體";
+}
+
+select, input {
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "微軟正黑體";
+}
+
+main {
+  display: block;
+}
+
+html, body {
+  width: 100%;
+  height: auto;
+}
+
+html {
+  width: 100%;
+  min-width: 1000px;
+  height: 100%;
+  position: relative;
+}
+html body {
+  width: auto;
+  height: 100%;
+  position: relative;
+}
+html body .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -999;
+}
+html header {
+  width: 100%;
+  min-width: 1000px;
+  height: 115px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+html header .top {
+  width: 100%;
+  height: 40px;
+  display: block;
+  background: #131313;
+}
+html header .top .center {
+  width: 1400px;
+  min-width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+html header .top .center form {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html header .top .center form label {
+  width: auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+html header .top .center form label .deco {
+  width: 42px;
+  height: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, right top, from(#ffb21d), to(#fb890e));
+  background: linear-gradient(to right, #ffb21d 0%, #fb890e 100%);
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+html header .top .center form label .deco .ac_ic {
+  width: 16px;
+  height: 18px;
+  position: relative;
+  z-index: 10;
+}
+html header .top .center form label .deco .pw_ic {
+  width: 14px;
+  height: 18px;
+  position: relative;
+  z-index: 10;
+}
+html header .top .center form label input {
+  width: 200px;
+  height: 28px;
+  border-radius: 50px;
+  border: none;
+  padding: 0 20px 0 50px;
+  margin-right: 10px;
+}
+html header .top .center form label .fgPW {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 4px;
+  right: 18px;
+  z-index: 5;
+  cursor: pointer;
+}
+html header .top .center form button {
+  width: 86px;
+  height: 28px;
+  background: -webkit-gradient(linear, left top, right top, from(#ffb21d), to(#fb890e));
+  background: linear-gradient(to right, #ffb21d 0%, #fb890e 100%);
+  border-radius: 50px;
+  border: 1px solid transparent;
+  margin-right: 10px;
+  color: #ffffff;
+  font-size: 18px;
+}
+html header .top .center form button:nth-of-type(1) {
+  background: -webkit-gradient(linear, left top, right top, from(#a1ea22), to(#34da14));
+  background: linear-gradient(to right, #a1ea22 0%, #34da14 100%);
+  color: #1a1a1a;
+}
+html header .top .center form button:hover, html header .top .center form button:active, html header .top .center form button.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#434343), to(#232323));
+  background: linear-gradient(to bottom, #434343 0%, #232323 100%);
+  color: #ffffff;
+  border-color: #bababa;
+}
+html header .top .center .lang {
+  width: 100px;
+  height: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #ffb21d;
+  border-radius: 50px;
+  color: #ffffff;
+  margin-left: 10px;
+  cursor: pointer;
+}
+html header .top .center .lang span {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 4px 0 4px;
+  border-color: #ffffff transparent transparent transparent;
+  margin-left: 5px;
+}
+html header .bottom {
+  width: 100%;
+  height: 75px;
+  display: block;
+  background: #ffb21d;
+}
+html header .bottom .center {
+  width: 1400px;
+  min-width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html header .bottom .center .logo {
+  width: 175px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html header .bottom .center .logo img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+html header .bottom .center ul {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 47px;
+}
+html header .bottom .center ul li {
+  width: auto;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2%;
+  background: transparent;
+  border-radius: 50px;
+  color: #1a1a1a;
+  font-size: 24px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+html header .bottom .center ul li:hover, html header .bottom .center ul li:active, html header .bottom .center ul li.active {
+  background: -webkit-gradient(linear, left top, right top, from(#333333), color-stop(75%, #0e0e0e));
+  background: linear-gradient(to right, #333333 0%, #0e0e0e 75%);
+  color: #ffb21d;
+}
+html footer {
+  width: 100%;
+  min-width: 1000px;
+  height: 260px;
+  background: #ffb21d;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+html footer nav {
+  width: 95%;
+  height: auto;
+  margin: 0 auto;
+  border-bottom: 2px solid #131313;
+}
+html footer nav ul {
+  width: 100%;
+  height: 67px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html footer nav ul li {
+  width: auto;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 0 17px;
+  margin-right: 5%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+html footer nav ul li p {
+  color: #1a1a1a;
+  font-size: 18px;
+  white-space: nowrap;
+}
+html footer nav ul li:last-child {
+  margin-right: 0;
+}
+html footer nav ul li:hover, html footer nav ul li:active, html footer nav ul li.active {
+  background: -webkit-gradient(linear, left bottom, left top, from(#333333), color-stop(75%, #0e0e0e));
+  background: linear-gradient(to top, #333333 0%, #0e0e0e 75%);
+  border-color: #bababa;
+  color: #ffb21d;
+}
+html footer .aboutCopany {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html footer .aboutCopany p {
+  color: #1a1a1a;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 40px;
+  text-align: center;
+  margin: 48px auto;
+}
+html aside .app {
+  width: 110px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #ffb21d;
+  border-radius: 10px;
+  position: fixed;
+  top: 217px;
+  left: 0;
+}
+html aside .app .content {
+  width: 95%;
+  height: 85%;
+  border: 1px solid #131313;
+  border-radius: 8px;
+}
+html aside .app ul {
+  position: absolute;
+  bottom: -32px;
+  left: 0;
+}
+html aside .app ul li {
+  display: block;
+}

@@ -1,0 +1,31 @@
+aside {
+    .app {
+        width: 110px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $mainColor;
+        border-radius: 10px;
+        position: fixed;
+        top: 217px;
+        left: 0;
+        
+        .content {
+            width: 95%;
+            height: 85%;
+            border: 1px solid $subColor;
+            border-radius: 8px;
+        }
+
+        ul {
+            position: absolute;
+            bottom: -32px;
+            left: 0;
+
+            li {
+                display: block;
+            }
+        }
+    }
+}
