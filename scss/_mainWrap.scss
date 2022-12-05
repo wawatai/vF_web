@@ -1,0 +1,99 @@
+.mainWrap {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    margin: 0 auto;
+
+    article {
+        width: 100%;
+        height: auto;
+
+        @include articleBG;
+
+        &.gameType {
+            .title {
+                .bigTitle {
+                    span {
+                        width: auto;
+                        color: transparent;
+                        text-align: end;
+                        background: $main_title_linear;
+                        background-clip: text;
+                    }
+                }
+            }
+            .content {
+                display: grid;
+                grid-template-columns: repeat(3, 3fr);
+                gap: 5%;
+                justify-items: flex-end;
+                padding: 58px;
+
+                .gameBlock {
+                    width: 80%;
+                    height: 203px;
+                    border: 1px solid $mainColor;
+                    border-radius: 15px;
+                    position: relative;
+
+                    .gamePic {
+                        width: 204px;
+                        height: 204px;
+                        background: $mainColor;
+                        border-radius: 200px;
+                        position: absolute;
+                        top: -2px;
+                        left: -100px;
+                    }
+
+                    
+                }
+                &:nth-of-type(4),
+                    &:nth-of-type(5),
+                    &:nth-of-type(6) {
+                        .gamePic {
+                            top: -2px;
+                            right: -100px;
+                        }
+                    }
+            }
+        }
+
+        .title {
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+
+            .bigTitle {
+                display: flex;
+                margin: 0 auto 20px;
+
+                span {
+                    
+                    font-size: 40px;
+                    font-weight: bold;
+                    
+                    margin: 0 20px 0 0;
+    
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+
+           .subTitle {
+                color: $smallTitle;
+                font-size: 16px;
+                letter-spacing: 2px;
+                text-align: center;
+           }
+        }
+
+        .content {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

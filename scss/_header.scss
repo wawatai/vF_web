@@ -159,6 +159,7 @@ header {
                 height: 100%;
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
                 margin-left: 47px;
 
                 li {
@@ -170,7 +171,7 @@ header {
                     background: transparent;
                     border-radius: 50px;
                     color: $mainFONT;
-                    font-size: 24px;
+                    font-size: 20px;
                     transition: 0.3s;
                     cursor: pointer;
                     

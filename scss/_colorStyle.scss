@@ -7,6 +7,9 @@ $hightLightMix: linear-gradient(to right, #a1ea22 0%, #34da14 100%);
 //字色
 $mainFONT: #1a1a1a;
 $subFONT: #ffffff;
+$main_title_linear: linear-gradient(to top, #ffb21d 0%, #fb890e 100%);
+$sub_title_linear: linear-gradient(to top, #a1ea22 0%, #34da14 100%);
+$smallTitle: #c5c5c5;
 
 //border
 $btnHOVborder: #bababa;
@@ -14,6 +17,33 @@ $btnHOVborder: #bababa;
 //header
 $btnHOV_bg: linear-gradient(to bottom, #434343 0%, #232323 100%);
 $liHOV_bg: linear-gradient(to right, #333333 0%, #0e0e0e 75%);
+
+//ad
+$swiperBTN: #ffffff60;
+
+//mq
+$mqBG: linear-gradient(to right, #ffb21d 3%, #ffb21d 24%, #ffeb7a 54%, #ffb21d 81%, #ffb21d 96%);
+$mqTitleBG: linear-gradient(to right, #ffb21d 0%, #fb890e 100%);
+$mqTiShadow: #0000003a;
+$mqTextBOxBG: #ffffff;
+
+//aside
+$btnBG: linear-gradient(to bottom, #202020 0%, #424242 100%);
+$btnBGHOV: linear-gradient(to top, #292929 0%, #171717 100%);
+$btnInsetShadow: #ffffff21;
+$asideBorder: #ffffff7a;
+$asideBorderHOV: #666666;
+
+//mainWrap
+
+//樣式
+@mixin articleBG {
+    background: radial-gradient(90deg, #202020 0%, #424242 100%);
+    border: 2px solid #ffffff43;
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 79px #ffffff4b,  0px 0px 8px #00000053;
+    padding: 5%;
+}
 
 //footer
 $navHOV_bg: linear-gradient(to top, #333333 0%, #0e0e0e 75%);

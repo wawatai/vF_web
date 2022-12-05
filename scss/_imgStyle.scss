@@ -9,13 +9,20 @@ header .deco .pw_ic {
     background-size: 100%;
 }
 
-header .deco .fgPW_ic {
+header .fgPW {
     background: url(../img/icon/help.png) no-repeat center;
+    background-size: 100%;
+}
+
+//mq
+
+.mq .mqTitle .mqIC {
+    background: url(../img/icon/mq_ic.png) no-repeat center;
     background-size: 100%;
 }
 
 //bg 
 .bg {
     background: url(../img/BG.png) no-repeat top center;
-    background-size: cover;
+    background-size: 100%;
 }
