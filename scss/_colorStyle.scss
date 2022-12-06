@@ -35,6 +35,10 @@ $asideBorder: #ffffff7a;
 $asideBorderHOV: #666666;
 
 //mainWrap
+$gameBlockBG: linear-gradient(0deg, #0d0d0d 0%, #5757577c 100%);
+$gameBlockShadow: #000000d3;
+$gamepic: #000000;
+$detailLayerBG: linear-gradient(to right, #ffb21d 0%, #fb8f0f 100%);
 
 //樣式
 @mixin articleBG {

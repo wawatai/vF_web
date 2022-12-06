@@ -11,6 +11,7 @@
         @include articleBG;
 
         &.gameType {
+            margin-bottom: 37px;
             .title {
                 .bigTitle {
                     span {
@@ -25,17 +26,48 @@
             .content {
                 display: grid;
                 grid-template-columns: repeat(3, 3fr);
-                gap: 5%;
+                gap: 10% 5%;
                 justify-items: flex-end;
                 padding: 58px;
 
                 .gameBlock {
                     width: 80%;
                     height: 203px;
+                    background: $gameBlockBG;
                     border: 1px solid $mainColor;
                     border-radius: 15px;
+                    box-shadow: 2px 2px 10px $gameBlockShadow;
                     position: relative;
+                    cursor: pointer;
 
+                    &:nth-of-type(4),
+                    &:nth-of-type(5),
+                    &:nth-of-type(6) {
+                        margin-left: -10px;
+                        box-shadow: -8px 13px 10px $gameBlockShadow;
+                        .gamePic {
+                            position: absolute;
+                            top: -2px;
+                            left: 168px;
+                        }
+
+                        .typeNameLayer {
+                            padding: 29% 34% 29% 0%;
+                        }
+                        .detailLayer {
+                            position: absolute;
+                            top: -0.1px;
+                            left: -1px;
+                        }
+                    }
+                    &:last-child {
+                        .gamePic {
+                            img {
+                                filter: contrast(200%) grayscale(100%);
+                            }
+                        }
+                    }
+                    // 圖片
                     .gamePic {
                         width: 204px;
                         height: 204px;
@@ -44,18 +76,69 @@
                         position: absolute;
                         top: -2px;
                         left: -100px;
-                    }
+                        z-index: 20;
+                        overflow: hidden;
 
-                    
-                }
-                &:nth-of-type(4),
-                    &:nth-of-type(5),
-                    &:nth-of-type(6) {
-                        .gamePic {
-                            top: -2px;
-                            right: -100px;
+                        img {
+                            filter: grayscale(100%);
                         }
                     }
+
+                    .typeNameLayer {
+                        padding: 29% 0% 29% 34%;
+                        position: relative;
+                        z-index: 5;
+
+                        p {
+                            text-align: center;
+
+                            &.chTitle {
+                                color: $subFONT;
+                                font-size: 20px;
+                                letter-spacing: 2px;
+                                margin-bottom: 10px;
+                            }
+
+                            &.enTitle {
+                                color:  $mainColor;
+                                letter-spacing: 5px;
+                            }
+                        }
+                    }
+
+                    //進入遊戲
+                    .detailLayer {
+                        width: 0;
+                        height: 100%;
+                        border-radius: 13px;
+                        position: absolute;
+                        top: -0.1px;
+                        left: 1px;
+                        z-index: 10;
+                        width: 100%;
+                        background: $detailLayerBG;
+
+                        .outter {
+                            width: 90%;
+                            height: 90%;
+                            border-radius: 15px;
+                        }
+                    }
+
+                    &:hover,&:active,.active {
+                        .gamePic {
+                            background: $gamepic;
+
+                            img {
+                                filter: none;
+                            }
+                        }
+                        .detailLayer {
+                            width: 100%;
+                            background: $detailLayerBG;
+                        }
+                    }
+                }
             }
         }
 
