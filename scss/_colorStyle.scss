@@ -10,6 +10,8 @@ $subFONT: #ffffff;
 $main_title_linear: linear-gradient(to top, #ffb21d 0%, #fb890e 100%);
 $sub_title_linear: linear-gradient(to top, #a1ea22 0%, #34da14 100%);
 $smallTitle: #c5c5c5;
+$gameTitle: #35c519;
+$gameTime: #787878;
 
 //border
 $btnHOVborder: #bababa;
@@ -39,6 +41,8 @@ $gameBlockBG: linear-gradient(0deg, #0d0d0d 0%, #5757577c 100%);
 $gameBlockShadow: #000000d3;
 $gamepic: #000000;
 $detailLayerBG: linear-gradient(to right, #ffb21d 0%, #fb8f0f 100%);
+$brandBtn: linear-gradient(to bottom, #292929 0%, #171717 100%);
+$betBorder: #a1ea22;
 
 //樣式
 @mixin articleBG {
