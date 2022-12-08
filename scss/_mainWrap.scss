@@ -40,25 +40,27 @@
                     border: 1px solid $mainColor;
                     border-radius: 100px 15px 15px 100px;
                     box-shadow: 2px 2px 10px $gameBlockShadow;
+                    overflow: hidden;
                     position: relative;
                     cursor: pointer;
 
                     &:nth-of-type(4),
                     &:nth-of-type(5),
                     &:nth-of-type(6) {
+                        border-radius: 15px 100px 100px 15px;
                         margin-left: -10px;
                         box-shadow: -8px 13px 10px $gameBlockShadow;
                         .gamePic {
                             position: absolute;
                             top: -2px;
-                            left: 168px;
+                            left: unset;
+                            right: -1px;
                         }
-
                         .typeNameLayer {
-                            padding: 29% 34% 29% 0%;
+                            padding: 0% 54% 0% 0%;
                         }
-                        
                     }
+
                     &:last-child {
                         .gamePic {
                             img {
@@ -74,7 +76,7 @@
                         border-radius: 200px;
                         position: absolute;
                         top: -2px;
-                        left: 0px;
+                        left: -1px;
                         z-index: 20;
                         overflow: hidden;
 
@@ -115,6 +117,129 @@
                     .detailLayer {
                         width: 100%;
                         height: 100%;
+                        background: $detailLayerBG;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 13px;
+                        position: absolute;
+                        top: -0.1px;
+                        left: 1px;
+                        transform: translateX(-100%);
+                        transition: 0.45s ease-in;
+                        z-index: 10;
+
+                        .outter {
+                            width: 96%;
+                            height: 95%;
+                            border-radius: 15px;
+                            border: 1.5px solid $gamepic;
+
+                            .brandBtn {
+                                width: 40%;
+                                height: 59%;
+                                display: grid;
+                                grid-template-columns: repeat(3, 3fr);
+                                gap: 5% 4%;
+                                padding: 5% 0 0;
+                                margin: 3% 0 5% 57%;
+
+                                button {
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    border-radius: 8px;
+                                    background: $brandBtn;
+                                    border: 1px solid $mainColor;
+                                    transition: 0.2s;
+
+                                    div {
+                                        background-position-y: 0%;
+                                        transition: 0.18s;
+                                        margin: auto;
+
+                                        &.dg {
+                                            width: 31px;
+                                            height: 15px;
+                                        }
+
+                                        &.sa {
+                                            width: 19px;
+                                            height: 21px;
+                                        }
+
+                                        &.og {
+                                            width: 27px;
+                                            height: 21px;
+                                        }
+
+                                        &.ab {
+                                            width: 32px;
+                                            height: 17px;
+                                        }
+
+                                        &.wm {
+                                            width: 21px;
+                                            height: 21px;
+                                        }
+                                    } 
+
+                                    &:hover,&:active,&.active {
+                                        div {
+                                            background-position-y: 100%;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .checkMore {
+                                width: 60%;
+                                height: 20%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 0 0 0 44%;
+
+                                p {
+                                    color: $subFONT;
+                                    font-size: 17px;
+                                    font-weight: bold;
+                                    white-space: nowrap;
+                                    margin-right: 10px;
+                                }
+
+                                .arrow {
+                                    width: 16%;
+                                    height: 2px;
+                                    background: $subFONT;
+                                    position: relative;
+                                    animation: move 1.5s ease-in-out infinite;
+
+                                    &:before {
+                                        content: "";
+                                        width: 0;
+                                        height: 0;
+                                        border-style: solid;
+                                        border-width: 6px 0 6px 8px;
+                                        border-color: transparent transparent transparent $subFONT;
+                                        position: absolute;
+                                        top: -5px;
+                                        right: -1px;
+                                    }
+                                }
+                               @keyframes move {
+                                0% {
+                                    transform: translateX(0);
+                                }
+                                50% {
+                                    transform: translateX(50%);
+                                }
+                                100% {
+                                    transform: translateX(0);
+                                }
+                               }
+                            }
+                        }
                     }
 
                     &:hover,&:active,&.active {
@@ -126,129 +251,7 @@
                             }
                         }
                         .detailLayer {
-                            width: 100%;
-                            background: $detailLayerBG;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            border-radius: 13px;
-                            position: absolute;
-                            top: -0.1px;
-                            left: 1px;
-                            z-index: 10;
-                            opacity: 1;
-
-                            .outter {
-                                width: 95%;
-                                height: 95%;
-                                border-radius: 15px;
-                                border: 1.5px solid $gamepic;
-    
-                                .brandBtn {
-                                    width: 56%;
-                                    height: 64%;
-                                    display: grid;
-                                    grid-template-columns: repeat(3, 3fr);
-                                    gap: 5%;
-                                    padding: 10% 0 0;
-                                    margin: 0 0 9% 39%;
-    
-                                    button {
-                                        width: 100%;
-                                        height: 100%;
-                                        display: flex;
-                                        // align-items: center;
-                                        // justify-content: center;
-                                        border-radius: 8px;
-                                        background: $brandBtn;
-                                        border: 1px solid $mainColor;
-
-                                        div {
-                                            background-position-y: 0%;
-                                            transition: 0.2s;
-                                            margin: auto;
-
-                                            &.dg {
-                                                width: 31px;
-                                                height: 15px;
-                                            }
-
-                                            &.sa {
-                                                width: 19px;
-                                                height: 21px;
-                                            }
-
-                                            &.og {
-                                                width: 27px;
-                                                height: 21px;
-                                            }
-
-                                            &.ab {
-                                                width: 32px;
-                                                height: 17px;
-                                            }
-
-                                            &.wm {
-                                                width: 21px;
-                                                height: 21px;
-                                            }
-
-                                            &:hover,&:active,&.active {
-                                                background-position-y: 100%;
-                                            }
-                                        } 
-                                        
-                                    }
-                                }
-    
-                                .checkMore {
-                                    width: 60%;
-                                    height: 20%;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    margin: 0 0 0 89px;
-    
-                                    p {
-                                        color: $subFONT;
-                                        font-size: 17px;
-                                        font-weight: bold;
-                                        white-space: nowrap;
-                                        margin-right: 10px;
-                                    }
-    
-                                    .arrow {
-                                        width: 16%;
-                                        height: 2px;
-                                        background: $subFONT;
-                                        position: relative;
-                                        animation: move 1.5s ease-in-out infinite;
-    
-                                        &:before {
-                                            content: "";
-                                            width: 0;
-                                            height: 0;
-                                            border-style: solid;
-                                            border-width: 6px 0 6px 8px;
-                                            border-color: transparent transparent transparent $subFONT;
-                                            position: absolute;
-                                            top: -5px;
-                                            right: -1px;
-                                        }
-                                    }
-                                   @keyframes move {
-                                    0% {
-                                        transform: translateX(0);
-                                    }
-                                    50% {
-                                        transform: translateX(50%);
-                                    }
-                                    100% {
-                                        transform: translateX(0);
-                                    }
-                                   }
-                                }
-                            }
+                            transform: translateX(0%);
                         }
 
                         
@@ -257,13 +260,24 @@
                     &:nth-of-type(6) {
                         .detailLayer {
                             left: 0;
+                            transition: 0.5s;
+                            animation: transR 0.2s linear;
+
+                            @keyframes transR {
+                                0% {
+                                    transform: translateX(100%);
+                                }
+                                100% {
+                                    transform: translateX(0%);
+                                }
+                            }
                            
                             .outter {
                                 .brandBtn {
-                                    margin: 0 28% 9% 6%;
-
+                                    margin: 3% 28% 5% 3%;
                                 }
                                 .checkMore {
+                                    width: 40%;
                                     margin: 0 15% 0 5%;
                                 }
                             }
@@ -315,7 +329,9 @@
                             justify-content: center;
                             background:  $gameBlockBG;
                             border-radius: 20px;
-                            border: 2px solid $asideBorder;
+                            border: 1px solid $asideBorder;
+                            box-shadow: -10px -10px 40px $betoutLight,
+                                        10px 10px 40px $betoutLight;
 
                             .outterBox {
                                 width: 95%;
@@ -324,21 +340,109 @@
                                 border-radius: 15px;
                                 padding: 13px;
 
-                                .gameName {
-                                    color: $gameTitle;
-                                    font-size: 20px;
-                                    font-weight: bold;
-                                    vertical-align: middle;
+                                .titleLine {
+                                    width: 100%;
+                                    height: auto;
+                                    display: flex;
+                                    flex-shrink: 0;
+                                    align-items: center;
+                                    margin-bottom: 20px;
+
+                                    .gameName {
+                                        color: $gameTitle;
+                                        font-size: 20px;
+                                        font-weight: bold;
+                                        vertical-align: middle;
+                                        letter-spacing: 2px;
+                                        white-space: nowrap;
+                                        text-overflow: ellipsis;
+                                        overflow: hidden;
+                                    }
 
                                     span {
                                         color: $gameTime;
                                         font-size: 16px;
+                                        letter-spacing: 0;
                                         margin-left: 10px;
+                                        white-space: nowrap;
+                                    }
+                                }
+                                
+                                .teamName {
+                                    width: 100%;
+                                    height: 20%;
+                                    display: flex;
+                                    justify-content: space-between;
+
+                                    .teamBox {
+                                        width: 40%;
+                                        display: flex;
+                                        flex-shrink: 0;
+                                        align-items: center;
+                
+                                        .logo {
+                                            width: 30%;
+                                            height: 100%;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            background: $betteamLOGO;
+                                            border-radius: 10px;
+                                            margin-right: 15px;
+
+                                            .md {
+                                                width: 70%;
+                                                height: 70%;
+                                            }
+
+                                            .ba {
+                                                width: 57%;
+                                                height: 79%;
+                                            }
+                                        }
+
+                                        p {
+                                            color: $subFONT;
+                                            font-size: 18px;
+                                            white-space: nowrap;
+                                            text-overflow: ellipsis;
+                                            overflow: hidden;
+                                        }
+                                    }
+
+                                    .vs {
+                                        width: 8%;
+                                        height: auto;
+                                        padding: 15px 0;
                                     }
                                 }
 
-                                .teamName {
+                                .pointBox {
+                                    width: 100%;
+                                    height: 23%;
                                     display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+
+                                    .stautsBox {
+                                        width: 31%;
+                                        height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border: 1px solid $betBorder;
+                                        border-radius: 10px;
+
+                                        p {
+                                            color: $subFONT;
+                                            font-size: 24px;
+
+                                            span {
+                                                color: $betBorder;
+                                                margin-left: 10px;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
