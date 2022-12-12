@@ -15,6 +15,7 @@ $gameTime: #787878;
 
 //border
 $btnHOVborder: #bababa;
+$getINbtn_border: #ffb034;
 
 //header
 $btnHOV_bg: linear-gradient(to bottom, #434343 0%, #232323 100%);
@@ -45,10 +46,12 @@ $brandBtn: linear-gradient(to bottom, #292929 0%, #171717 100%);
 $betBorder: #a1ea22;
 $betoutLight: #a1ea226e;
 $betteamLOGO: #ffffff;
+$betgetinBtnBG: #262626;
+$barTubeBG: #414141;
 
 //樣式
 @mixin articleBG {
-    background: radial-gradient(90deg, #202020 0%, #424242 100%);
+    background: radial-gradient(#2020204d 0%, #42424266 100%);
     border: 2px solid #ffffff43;
     border-radius: 15px;
     box-shadow: inset 0px 0px 79px #ffffff4b,  0px 0px 8px #00000053;
