@@ -56,6 +56,38 @@ $barTubeBG: #414141;
     border-radius: 15px;
     box-shadow: inset 0px 0px 79px #ffffff4b,  0px 0px 8px #00000053;
     padding: 5%;
+    transition: transform 0.4s;
+    
+    &:hover,&:active,&.active {
+        background: radial-gradient(#2020204d 0%, #5e5e5e88 100%);
+        // transform: rotateY(-10deg) rotateZ(1deg) scale(0.9);
+
+        .title {
+            .subTitle {
+                background: linear-gradient(90deg, #000, #fff, #000);
+                overflow: hidden;
+                background-size: 80%;
+                background-repeat: no-repeat;
+                background-clip: text;
+                -webkit-text-fill-color: rgba(114, 114, 114, 0);
+                animation: textAnimate 1.5s linear forwards;
+
+                @keyframes textAnimate {
+                    0% {
+                      background-position: -100%;
+                    }
+                    95% {
+                      background-position: 450%;
+                    }
+                    100% {
+                      background: #ffffff;
+                      background-clip: text;
+                      font-weight: bold;
+                    }
+                  }
+            }
+        }
+    }
 }
 
 @mixin scrllBar {

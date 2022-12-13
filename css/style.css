@@ -583,6 +583,7 @@ html header .bottom .center ul li:hover, html header .bottom .center ul li:activ
   background: -webkit-gradient(linear, left top, right top, from(#333333), color-stop(75%, #0e0e0e));
   background: linear-gradient(to right, #333333 0%, #0e0e0e 75%);
   color: #ffb21d;
+  text-shadow: 0px 0px 5px #ffb21d;
 }
 @media only screen and (max-width: 1480px) {
   html header .bottom .center {
@@ -798,6 +799,53 @@ html .mainWrap article:not(:last-child) {
   -webkit-box-shadow: inset 0px 0px 79px rgba(255, 255, 255, 0.2941176471), 0px 0px 8px rgba(0, 0, 0, 0.3254901961);
           box-shadow: inset 0px 0px 79px rgba(255, 255, 255, 0.2941176471), 0px 0px 8px rgba(0, 0, 0, 0.3254901961);
   padding: 5%;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+html .mainWrap article:not(:last-child):hover, html .mainWrap article:not(:last-child):active, html .mainWrap article:not(:last-child).active {
+  background: radial-gradient(rgba(32, 32, 32, 0.3019607843) 0%, rgba(94, 94, 94, 0.5333333333) 100%);
+}
+html .mainWrap article:not(:last-child):hover .title .subTitle, html .mainWrap article:not(:last-child):active .title .subTitle, html .mainWrap article:not(:last-child).active .title .subTitle {
+  background: -webkit-gradient(linear, left top, right top, from(#000), color-stop(#fff), to(#000));
+  background: linear-gradient(90deg, #000, #fff, #000);
+  overflow: hidden;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: rgba(114, 114, 114, 0);
+  -webkit-animation: textAnimate 1.5s linear forwards;
+          animation: textAnimate 1.5s linear forwards;
+}
+@-webkit-keyframes textAnimate {
+  0% {
+    background-position: -100%;
+  }
+  95% {
+    background-position: 450%;
+  }
+  100% {
+    background: #ffffff;
+    -webkit-background-clip: text;
+            background-clip: text;
+    font-weight: bold;
+  }
+}
+@keyframes textAnimate {
+  0% {
+    background-position: -100%;
+  }
+  95% {
+    background-position: 450%;
+  }
+  100% {
+    background: #ffffff;
+    -webkit-background-clip: text;
+            background-clip: text;
+    font-weight: bold;
+  }
 }
 html .mainWrap article.gameType {
   margin-bottom: 37px;
@@ -1583,7 +1631,40 @@ html .mainWrap article.introduce .dataBlock {
   -webkit-box-shadow: inset 0px 0px 79px rgba(255, 255, 255, 0.2941176471), 0px 0px 8px rgba(0, 0, 0, 0.3254901961);
           box-shadow: inset 0px 0px 79px rgba(255, 255, 255, 0.2941176471), 0px 0px 8px rgba(0, 0, 0, 0.3254901961);
   padding: 5%;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
   padding: 2%;
+}
+html .mainWrap article.introduce .dataBlock:hover, html .mainWrap article.introduce .dataBlock:active, html .mainWrap article.introduce .dataBlock.active {
+  background: radial-gradient(rgba(32, 32, 32, 0.3019607843) 0%, rgba(94, 94, 94, 0.5333333333) 100%);
+}
+html .mainWrap article.introduce .dataBlock:hover .title .subTitle, html .mainWrap article.introduce .dataBlock:active .title .subTitle, html .mainWrap article.introduce .dataBlock.active .title .subTitle {
+  background: -webkit-gradient(linear, left top, right top, from(#000), color-stop(#fff), to(#000));
+  background: linear-gradient(90deg, #000, #fff, #000);
+  overflow: hidden;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: rgba(114, 114, 114, 0);
+  -webkit-animation: textAnimate 1.5s linear forwards;
+          animation: textAnimate 1.5s linear forwards;
+}
+@keyframes textAnimate {
+  0% {
+    background-position: -100%;
+  }
+  95% {
+    background-position: 450%;
+  }
+  100% {
+    background: #ffffff;
+    -webkit-background-clip: text;
+            background-clip: text;
+    font-weight: bold;
+  }
 }
 html .mainWrap article.introduce .dataBlock .title .bigTitle span {
   width: auto;
