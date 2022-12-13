@@ -3,6 +3,9 @@
     max-width: 1400px;
     height: auto;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     article {
         width: 100%;
@@ -101,7 +104,7 @@
                         flex-direction: column;
                         align-items: center;
                         justify-content: center;
-                        padding: 0% 0% 0% 50%;
+                        padding: 0% 0% 0% 57%;
                         position: relative;
                         z-index: 5;
 
@@ -139,9 +142,9 @@
                         z-index: 10;
 
                         .outter {
-                            width: 96%;
+                            width: 97%;
                             height: 95%;
-                            border-radius: 15px;
+                            border-radius: 12px;
                             border: 1.5px solid $gamepic;
 
                             .brandBtn {
@@ -319,7 +322,6 @@
                     margin-bottom: 64px;
                     padding: 54px 0;
                     margin: 0 auto 43px;
-                    // transform: translate3d(-4011px, 0px, 0px);
                     overflow: hidden;
                     
                     .swiper-slide {
@@ -402,8 +404,8 @@
                                         align-items: center;
                 
                                         .logo {
-                                            width: 30%;
-                                            height: 100%;
+                                            width: 33%;
+                                            height: 88%;
                                             display: flex;
                                             align-items: center;
                                             justify-content: center;
@@ -615,15 +617,11 @@
                         height: 500px;
                         position: relative;
                         z-index: 3;
-                    }
+                        transition: 0.3s;
 
-                    .mainObjLight {
-                        width: 75.5%;
-                        height: 500px;
-                        position: absolute;
-                        top: -33px;
-                        left: 87px;
-                        z-index: 10;
+                        &.active {
+                            filter: drop-shadow(10px -10px 90px $mainColor);
+                        }
                     }
 
                     .coinAll {
@@ -633,10 +631,11 @@
                         position: absolute;
                         top: -71px;
                         left: 27px;
+                        z-index: 8;
                         opacity: 0;
 
                         &.active {
-                            animation: falldown 1s 0.2s ease-in-out forwards;
+                            animation: falldown 0.5s 0.2s ease-in-out forwards;
 
                             @keyframes falldown {
                                 0% {
@@ -730,7 +729,7 @@
             margin-bottom: 40px;
 
             .dataBlock {
-                width: 32.5%;
+                width: calc(95% / 3);
                 height: auto;
 
                 @include articleBG;
@@ -923,6 +922,153 @@
         .content {
             width: 100%;
             height: auto;
+        }
+    }
+
+    @media only screen and (max-width: 1460px){
+        article {
+            width: 99%;
+        }
+    }
+
+    @media only screen and (max-width: 1445px){
+        article.gameType {
+            .content {
+                gap: 7% 2%;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1315px){
+        article.gameType {
+            .content {
+                gap: 7% 2%;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1360px){
+        article {
+            &.gameType {
+                .content {
+                    .gameBlock {
+                        .detailLayer {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1190px){
+        article {
+            &.gameType {
+                .content {
+                    justify-items: center;
+
+                    .gameBlock {
+                        width: 203px;
+                        border-radius: 100px;
+                        &:nth-of-type(4),
+                        &:nth-of-type(5),
+                        &:nth-of-type(6) {
+                            border-radius: 100px;
+                        }
+
+                        .typeNameLayer {
+                            padding: 0px;
+                        }
+                        
+                            &:hover,&:active,&.active {
+                                &:nth-of-type(4),
+                                &:nth-of-type(5),
+                                &:nth-of-type(6) {
+                                    .typeNameLayer {
+                                        padding-right: 0;
+                                        z-index: 20;
+                                    }
+                                }
+
+                                .gamePic {
+                                    img {
+                                        filter: blur(5px) brightness(0.5);
+                                    }
+                                }
+
+                                .typeNameLayer {
+                                    // padding: -25%;
+                                    transition: 0.2s;
+                                    z-index: 20;
+                                }
+                            }       
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1370px){
+        article {
+            width: 97%;
+        }
+    }
+
+    @media only screen and (max-width: 1125px){
+        article {
+            &.bet {
+                .content {
+                    margin: 0 auto;
+                    .betswiper {
+                        margin: 0 auto;
+                        .swiper-slide {
+                            transform: scale(0.6);
+
+                            &.swiper-slide-active {
+                                transform: scale(0.8);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1030px){
+        article {
+            width: 95%;
+        }
+    }
+
+    @media only screen and (max-width: 1020px){
+        article {
+            &.bet {
+                .swiper-button-next02 {
+                    left: unset;
+                    right: 11px;
+                }
+            }
+
+            &.appAD {
+                .content {
+                    padding: 15px 0 0;
+
+                    .getIN {
+                        margin: 0 auto;
+                        z-index: 15;
+                    }
+                }
+            }
+
+            &.introduce {
+                .title {
+                    .bigTitle {
+                        span {
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
         }
     }
 }

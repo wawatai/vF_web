@@ -35,6 +35,8 @@ $(function(){
 //appAD
 $(function(){
     $(".appAD .getIN").hover(function(){
+        $(".mainObj ")
+        .addClass("active");
         $(".coinAll")
         .addClass("active");
         $(".light01")
@@ -42,6 +44,8 @@ $(function(){
         $(".light02")
         .addClass("active");
     }, function(){
+        $(".mainObj")
+        .removeClass("active");
         $(".coinAll")
         .removeClass("active");
         $(".light01")

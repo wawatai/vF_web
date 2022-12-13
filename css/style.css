@@ -212,6 +212,21 @@ html body {
   height: 100%;
   position: relative;
 }
+html body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+html body::-webkit-scrollbar-thumb {
+  background: -webkit-gradient(linear, left top, right top, from(#a1ea22), to(#34da14));
+  background: linear-gradient(to right, #a1ea22 0%, #34da14 100%);
+  border-radius: 15px;
+}
+html body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.8274509804);
+}
+html body::-webkit-scrollbar {
+  width: 0;
+}
 html body .bg {
   width: 100%;
   height: 100%;
@@ -219,6 +234,141 @@ html body .bg {
   top: 0;
   left: 0;
   z-index: -999;
+}
+html body .bg span {
+  background: -webkit-gradient(linear, left top, right top, from(#ffb21d), to(#fb890e));
+  background: linear-gradient(to right, #ffb21d 0%, #fb890e 100%);
+  border-radius: 200px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 100px;
+  z-index: -800;
+}
+html body .bg span.right {
+  left: unset;
+  right: 100px;
+}
+html body .bg span.right.bigCircle {
+  -webkit-animation: bfly 8s 2s linear infinite;
+          animation: bfly 8s 2s linear infinite;
+}
+html body .bg span.bigCircle {
+  width: 200px;
+  height: 200px;
+  -webkit-animation: bfly 8s 5s linear infinite;
+          animation: bfly 8s 5s linear infinite;
+}
+html body .bg span.midCircle {
+  width: 150px;
+  height: 150px;
+  left: 10px;
+  -webkit-animation: bfly 8s 5s linear infinite;
+          animation: bfly 8s 5s linear infinite;
+}
+html body .bg span.smallCircle {
+  width: 100px;
+  height: 100px;
+  -webkit-animation: sfly 10s 5.5s linear infinite;
+          animation: sfly 10s 5.5s linear infinite;
+}
+@-webkit-keyframes bfly {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-20%, 500%);
+            transform: translate(-20%, 500%);
+  }
+  20% {
+    -webkit-transform: translate(10%, 400%);
+            transform: translate(10%, 400%);
+  }
+  60% {
+    -webkit-transform: translate(-10%, 200%);
+            transform: translate(-10%, 200%);
+  }
+  80% {
+    -webkit-transform: translate(10%, -10%);
+            transform: translate(10%, -10%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0%, -200%);
+            transform: translate(0%, -200%);
+  }
+}
+@keyframes bfly {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-20%, 500%);
+            transform: translate(-20%, 500%);
+  }
+  20% {
+    -webkit-transform: translate(10%, 400%);
+            transform: translate(10%, 400%);
+  }
+  60% {
+    -webkit-transform: translate(-10%, 200%);
+            transform: translate(-10%, 200%);
+  }
+  80% {
+    -webkit-transform: translate(10%, -10%);
+            transform: translate(10%, -10%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0%, -200%);
+            transform: translate(0%, -200%);
+  }
+}
+@-webkit-keyframes sfly {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(200%, 1000%);
+            transform: translate(200%, 1000%);
+  }
+  20% {
+    -webkit-transform: translate(100%, 900%);
+            transform: translate(100%, 900%);
+  }
+  60% {
+    -webkit-transform: translate(0%, 600%);
+            transform: translate(0%, 600%);
+  }
+  80% {
+    -webkit-transform: translate(100%, 300%);
+            transform: translate(100%, 300%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+@keyframes sfly {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(200%, 1000%);
+            transform: translate(200%, 1000%);
+  }
+  20% {
+    -webkit-transform: translate(100%, 900%);
+            transform: translate(100%, 900%);
+  }
+  60% {
+    -webkit-transform: translate(0%, 600%);
+            transform: translate(0%, 600%);
+  }
+  80% {
+    -webkit-transform: translate(100%, 300%);
+            transform: translate(100%, 300%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
 }
 html header {
   width: 100%;
@@ -381,7 +531,7 @@ html header .bottom .center {
           align-items: center;
 }
 html header .bottom .center .logo {
-  width: 175px;
+  width: 10%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -424,6 +574,7 @@ html header .bottom .center ul li {
   border-radius: 50px;
   color: #1a1a1a;
   font-size: 20px;
+  white-space: nowrap;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
@@ -432,6 +583,38 @@ html header .bottom .center ul li:hover, html header .bottom .center ul li:activ
   background: -webkit-gradient(linear, left top, right top, from(#333333), color-stop(75%, #0e0e0e));
   background: linear-gradient(to right, #333333 0%, #0e0e0e 75%);
   color: #ffb21d;
+}
+@media only screen and (max-width: 1480px) {
+  html header .bottom .center {
+    width: 95%;
+    min-width: 900px;
+  }
+}
+@media only screen and (max-width: 1460px) {
+  html header .bottom .center {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  html header .top .center {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 1157px) {
+  html header .bottom .center ul li {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 1060px) {
+  html header .bottom .center ul li {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  html header .top .center {
+    width: 94%;
+    min-width: 900px;
+  }
 }
 html .ad {
   width: auto;
@@ -582,11 +765,27 @@ html .mq .textBox .content {
             transform: translateX(-90%);
   }
 }
+@media only screen and (max-width: 1470px) {
+  html .mq {
+    width: 97%;
+    min-width: 750px;
+  }
+}
 html .mainWrap {
   width: 100%;
   max-width: 1400px;
   height: auto;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 html .mainWrap article {
   width: 100%;
@@ -689,7 +888,7 @@ html .mainWrap article.gameType .content .gameBlock .typeNameLayer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0% 0% 0% 50%;
+  padding: 0% 0% 0% 57%;
   position: relative;
   z-index: 5;
 }
@@ -731,9 +930,9 @@ html .mainWrap article.gameType .content .gameBlock .detailLayer {
   z-index: 10;
 }
 html .mainWrap article.gameType .content .gameBlock .detailLayer .outter {
-  width: 96%;
+  width: 97%;
   height: 95%;
-  border-radius: 15px;
+  border-radius: 12px;
   border: 1.5px solid #000000;
 }
 html .mainWrap article.gameType .content .gameBlock .detailLayer .outter .brandBtn {
@@ -1026,8 +1225,8 @@ html .mainWrap article.bet .content .betswiper .swiper-slide .betDetail .outterB
           align-items: center;
 }
 html .mainWrap article.bet .content .betswiper .swiper-slide .betDetail .outterBox .teamName .teamBox .logo {
-  width: 30%;
-  height: 100%;
+  width: 33%;
+  height: 88%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1249,14 +1448,12 @@ html .mainWrap article.appAD .content .adPic .mainObj {
   height: 500px;
   position: relative;
   z-index: 3;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
-html .mainWrap article.appAD .content .adPic .mainObjLight {
-  width: 75.5%;
-  height: 500px;
-  position: absolute;
-  top: -33px;
-  left: 87px;
-  z-index: 10;
+html .mainWrap article.appAD .content .adPic .mainObj.active {
+  -webkit-filter: drop-shadow(10px -10px 90px #ffb21d);
+          filter: drop-shadow(10px -10px 90px #ffb21d);
 }
 html .mainWrap article.appAD .content .adPic .coinAll {
   width: 91%;
@@ -1266,11 +1463,12 @@ html .mainWrap article.appAD .content .adPic .coinAll {
   position: absolute;
   top: -71px;
   left: 27px;
+  z-index: 8;
   opacity: 0;
 }
 html .mainWrap article.appAD .content .adPic .coinAll.active {
-  -webkit-animation: falldown 1s 0.2s ease-in-out forwards;
-          animation: falldown 1s 0.2s ease-in-out forwards;
+  -webkit-animation: falldown 0.5s 0.2s ease-in-out forwards;
+          animation: falldown 0.5s 0.2s ease-in-out forwards;
 }
 @-webkit-keyframes falldown {
   0% {
@@ -1377,7 +1575,7 @@ html .mainWrap article.introduce {
   margin-bottom: 40px;
 }
 html .mainWrap article.introduce .dataBlock {
-  width: 32.5%;
+  width: 31.6666666667%;
   height: auto;
   background: radial-gradient(rgba(32, 32, 32, 0.3019607843) 0%, rgba(66, 66, 66, 0.4) 100%);
   border: 2px solid rgba(255, 255, 255, 0.262745098);
@@ -1577,6 +1775,96 @@ html .mainWrap article .title .subTitle {
 html .mainWrap article .content {
   width: 100%;
   height: auto;
+}
+@media only screen and (max-width: 1460px) {
+  html .mainWrap article {
+    width: 99%;
+  }
+}
+@media only screen and (max-width: 1445px) {
+  html .mainWrap article.gameType .content {
+    gap: 7% 2%;
+  }
+}
+@media only screen and (max-width: 1315px) {
+  html .mainWrap article.gameType .content {
+    gap: 7% 2%;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  html .mainWrap article.gameType .content .gameBlock .detailLayer {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1190px) {
+  html .mainWrap article.gameType .content {
+    justify-items: center;
+  }
+  html .mainWrap article.gameType .content .gameBlock {
+    width: 203px;
+    border-radius: 100px;
+  }
+  html .mainWrap article.gameType .content .gameBlock:nth-of-type(4), html .mainWrap article.gameType .content .gameBlock:nth-of-type(5), html .mainWrap article.gameType .content .gameBlock:nth-of-type(6) {
+    border-radius: 100px;
+  }
+  html .mainWrap article.gameType .content .gameBlock .typeNameLayer {
+    padding: 0px;
+  }
+  html .mainWrap article.gameType .content .gameBlock:hover:nth-of-type(4) .typeNameLayer, html .mainWrap article.gameType .content .gameBlock:hover:nth-of-type(5) .typeNameLayer, html .mainWrap article.gameType .content .gameBlock:hover:nth-of-type(6) .typeNameLayer, html .mainWrap article.gameType .content .gameBlock:active:nth-of-type(4) .typeNameLayer, html .mainWrap article.gameType .content .gameBlock:active:nth-of-type(5) .typeNameLayer, html .mainWrap article.gameType .content .gameBlock:active:nth-of-type(6) .typeNameLayer, html .mainWrap article.gameType .content .gameBlock.active:nth-of-type(4) .typeNameLayer, html .mainWrap article.gameType .content .gameBlock.active:nth-of-type(5) .typeNameLayer, html .mainWrap article.gameType .content .gameBlock.active:nth-of-type(6) .typeNameLayer {
+    padding-right: 0;
+    z-index: 20;
+  }
+  html .mainWrap article.gameType .content .gameBlock:hover .gamePic img, html .mainWrap article.gameType .content .gameBlock:active .gamePic img, html .mainWrap article.gameType .content .gameBlock.active .gamePic img {
+    -webkit-filter: blur(5px) brightness(0.5);
+            filter: blur(5px) brightness(0.5);
+  }
+  html .mainWrap article.gameType .content .gameBlock:hover .typeNameLayer, html .mainWrap article.gameType .content .gameBlock:active .typeNameLayer, html .mainWrap article.gameType .content .gameBlock.active .typeNameLayer {
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    z-index: 20;
+  }
+}
+@media only screen and (max-width: 1370px) {
+  html .mainWrap article {
+    width: 97%;
+  }
+}
+@media only screen and (max-width: 1125px) {
+  html .mainWrap article.bet .content {
+    margin: 0 auto;
+  }
+  html .mainWrap article.bet .content .betswiper {
+    margin: 0 auto;
+  }
+  html .mainWrap article.bet .content .betswiper .swiper-slide {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  html .mainWrap article.bet .content .betswiper .swiper-slide.swiper-slide-active {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+@media only screen and (max-width: 1030px) {
+  html .mainWrap article {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 1020px) {
+  html .mainWrap article.bet .swiper-button-next02 {
+    left: unset;
+    right: 11px;
+  }
+  html .mainWrap article.appAD .content {
+    padding: 15px 0 0;
+  }
+  html .mainWrap article.appAD .content .getIN {
+    margin: 0 auto;
+    z-index: 15;
+  }
+  html .mainWrap article.introduce .title .bigTitle span {
+    font-size: 30px;
+  }
 }
 html footer {
   width: 100%;

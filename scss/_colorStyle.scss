@@ -58,5 +58,21 @@ $barTubeBG: #414141;
     padding: 5%;
 }
 
+@mixin scrllBar {
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $hightLightMix;
+        border-radius: 15px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $gameBlockShadow;
+    }
+}
+
 //footer
 $navHOV_bg: linear-gradient(to top, #333333 0%, #0e0e0e 75%);

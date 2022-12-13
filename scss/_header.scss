@@ -142,7 +142,7 @@ header {
             align-items: center;
 
             .logo {
-                width: 175px;
+                width: 10%;
                 height: 100%;
                 display: flex;
                 align-items: center;
@@ -172,6 +172,7 @@ header {
                     border-radius: 50px;
                     color: $mainFONT;
                     font-size: 20px;
+                    white-space: nowrap;
                     transition: 0.3s;
                     cursor: pointer;
                     
@@ -180,6 +181,70 @@ header {
                         color: $mainColor;
                     }
                 }
+            }
+        }
+    }
+
+    
+    @media only screen and (max-width: 1480px) {
+
+        .bottom {
+            .center {
+                width: 95%;
+                min-width: 900px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1460px) {
+
+        .bottom {
+            .center {
+                width: 95%;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1440px) {
+
+        .top {
+            .center {
+                width: 95%;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1157px) {
+        
+        .bottom {
+            .center {
+                ul {
+                    li {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 1060px) {
+        
+        .bottom {
+            .center {
+                ul {
+                    li {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1050px) {
+        
+        .top {
+            .center {
+                width: 94%;
+                min-width: 900px;
             }
         }
     }
